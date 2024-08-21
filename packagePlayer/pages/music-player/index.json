@@ -1,0 +1,6 @@
+{
+    "navigationStyle": "custom",
+    "usingComponents": {
+        "navigation-bar": "/base-ui/navigation-bar/index"
+    }
+}

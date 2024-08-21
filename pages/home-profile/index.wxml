@@ -1,0 +1,7 @@
+<!--pages/home-profile/index.wxml-->
+
+<!-- 使用绑定好的事件，从event中获取数据，open-type必填 -->
+<!-- <button open-type="getUserInfo" bindgetuserinfo="handleGetUser">获取用户信息</button> -->
+
+<!-- 使用普通事件，配合wx API获取用户信息 -->
+<button bindtap="handleGetUser">获取用户信息</button>

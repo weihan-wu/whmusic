@@ -1,0 +1,64 @@
+{
+    "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+    "projectname": "whmusic",
+    "setting": {
+        "compileHotReLoad": false,
+        "urlCheck": false
+    },
+    "condition": {
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "",
+                    "pathName": "pages/home-video/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "detail-video",
+                    "pathName": "pages/detail-video/index",
+                    "query": "id=14612840",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "detail-song-menu",
+                    "pathName": "pages/detail-songs/index",
+                    "query": "id=7280158748&type=menu",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "detail-search",
+                    "pathName": "pages/detail-search/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "music-player",
+                    "pathName": "pages/music-player/index",
+                    "query": "id=2038508476",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/home-music/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "home-profile",
+                    "pathName": "pages/home-profile/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                }
+            ]
+        }
+    },
+    "libVersion": "2.10.4"
+}

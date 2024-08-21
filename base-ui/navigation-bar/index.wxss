@@ -1,0 +1,49 @@
+/* components/navigation-bar/index.wxss */
+.nav-bar {
+    display: flex;
+    text-align: center;
+}
+
+.left,
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120rpx;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.left-arrow {
+    display: none;
+}
+
+.left-slot:empty+.left-arrow {
+    display: block;
+}
+
+.center-title {
+    display: none;
+}
+
+.center-slot:empty+.center-title {
+    display: block;
+}
+
+.left .left-arrow .icon {
+    width: 40rpx;
+    display: block;
+}
+
+.right-default {
+    display: none;
+}
+
+.right-slot:empty+.right-default {
+    display: block;
+}

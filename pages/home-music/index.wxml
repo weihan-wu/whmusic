@@ -1,0 +1,47 @@
+<!--pages/home-music/index.wxml-->
+<van-search disabled value="{{ value }}" background="#fafafa" shape="round" placeholder="搜索你喜欢的歌曲" bind:click-input="handleSearchClick" />
+
+<swiper class="swiper" indicator-dots autoplay circular style="height: {{swiperHeight}}px;">
+    <block wx:for="{{banners}}" wx:key="bannerId">
+        <swiper-item class="swiper-item">
+            <image class="swiper-image" src="{{item.pic}}" mode="widthFix" bindload="handleSwipeLoaded"></image>
+        </swiper-item>
+    </block>
+</swiper>
+
+<view class="recommend-song" wx:if="{{recommendSongs.length > 0}}">
+    <area-header title="推荐歌曲" bind:click="handleMoreClick" />
+    <view class="song-list">
+        <block wx:for="{{recommendSongs}}" wx:key="index">
+            <song-item-v1 item="{{item}}" bindtap="handleSongItemClick" data-index="{{index}}"></song-item-v1>
+        </block>
+    </view>
+</view>
+
+<song-menu-area title="推荐歌单" songMenu="{{hotSongMenu}}" wx:if="{{hotSongMenu.length>0}}" />
+
+<song-menu-area title="热门歌单" songMenu="{{recommendSongMenu}}" wx:if="{{recommendSongMenu.length>0}}" />
+
+<view class="ranking">
+    <area-header title="巅峰榜" showRight="{{false}}"></area-header>
+    <view class="ranking-list">
+        <block wx:for="{{rankings}}" wx:key="name">
+            <ranking-area-item bindtap="handleRankingItemClick" data-idx="{{index}}" item="{{item}}"></ranking-area-item>
+        </block>
+    </view>
+</view>
+
+<!-- 避免展示播放栏时遮挡主体内容 -->
+<view style="width: 100%;height: 44px;" wx:if="{{currentSong.id}}"></view>
+
+<view class="play-bar" bindtap="handlePlayBarClick" wx:if="{{currentSong.id}}">
+    <view class="left">
+        <image class="album album-anim" style="animation-play-state: {{isPlaying?'running':'paused'}};" src="{{currentSong.al.picUrl}}" mode="aspectFill" />
+        <view class="name">{{currentSong.name}}</view>
+    </view>
+    <view class="right">
+        <!-- catchtap 绑定一个点击事件，点击此事件不会冒泡触发外层事件 -->
+        <image class="icon play" mode="aspectFill" src="/assets/images/music/{{isPlaying?'pause':'play'}}_icon.png" catchtap="handlePlayBtnClick"></image>
+        <image class="icon play" mode="aspectFill" src="/assets/images/music/playlist_icon.png"></image>
+    </view>
+</view>
