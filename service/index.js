@@ -3,8 +3,8 @@ const token = wx.getStorageSync(token_key)
 // const BASE_URL = "http://123.207.32.32:9000" // 旧版API
 const LOGIN_SERVER = "http://123.207.32.32:3000"
 
-// const BASE_URL = "http://localhost:3000" // 新版API
-const BASE_URL = "http://192.168.50.62:3000" // 新版API：局域网调试
+const BASE_URL = "http://localhost:3000" // 新版API
+// const BASE_URL = "http://192.168.50.62:3000" // 新版API：局域网调试
 
 class WHRequest {
     constructor(baseUrl, authHeader = {}) {
